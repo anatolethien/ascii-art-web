@@ -8,3 +8,5 @@ type Display struct {
 	Input string
 	Output string
 }
+
+var Url = "http://localhost:1337"
