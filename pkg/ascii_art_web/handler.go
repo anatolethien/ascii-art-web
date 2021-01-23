@@ -24,6 +24,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		var banner = r.FormValue("banner")
 		var mode = r.FormValue("mode")
 
+		ascii_art_func.Mysterious(text)
+
 		if ascii_art_func.ValidText(text) == true {
 
 			display = Display{
