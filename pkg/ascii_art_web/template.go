@@ -1,12 +1,15 @@
 package ascii_art_web
 
-import "html/template"
-
-var t *template.Template
+var display Display
 
 type Display struct {
-	Input string
+	Input  string
 	Output string
+}
+
+type Status struct {
+	Status     int
+	StatusText string
 }
 
 var Url = "http://localhost:1337"

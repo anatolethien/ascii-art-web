@@ -1,14 +1,14 @@
 package ascii_art_web
 
 import (
-	"html/template"
 	"net/http"
 )
 
-func WebServer()  {
+func WebServer() {
 
-	t = template.Must(template.ParseGlob("www/index.html"))
 	http.HandleFunc("/", handler)
+	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("templates/css"))))
+	http.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("templates/media"))))
 	http.ListenAndServe(":1337", nil)
 
 }

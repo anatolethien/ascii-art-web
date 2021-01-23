@@ -2,8 +2,8 @@ package ascii_art_web
 
 import "os/exec"
 
-func OpenBrowser(url string) {
+func OpenBrowser() {
 
-	_ = exec.Command("xdg-open", url).Start()
+	exec.Command("xdg-open", Url).Start()
 
 }

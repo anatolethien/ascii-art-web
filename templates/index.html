@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ascii-art-web</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<form method="post">
+    <div class="grid-container">
+        <div class="containerBar">
+            <div class="itemTextarea">
+                <textarea cols="96" rows="5" name="text" placeholder="Please enter your text...">{{.Input}}</textarea>
+            </div>
+            <div class="containerParams">
+                <div class="itemSelect">
+                    <select name="banner">
+                        <option value="standard">standard</option>
+                        <option value="shadow">shadow</option>
+                        <option value="thinkertoy">thinkertoy</option>
+                        <option value="doom">doom</option>
+                    </select>
+                </div>
+                <div class="itemRadio">
+
+                </div>
+            </div>
+            <div class="itemButton">
+                <button>Convert</button>
+            </div>
+        </div>
+        <div class="containerPre">
+            <pre>{{.Output}}</pre>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

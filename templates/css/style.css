@@ -1,0 +1,67 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 6fr;
+    grid-template-areas:
+    "containerBar"
+    "containerPre";
+    margin: 1%;
+}
+
+.containerBar {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "itemTextarea containerParams itemButton"
+    "itemTextarea containerParams itemButton";
+    grid-area: containerBar;
+    margin: fill;
+}
+
+.itemTextarea {
+    grid-area: itemTextarea;
+    border: solid;
+    margin: auto;
+}
+
+textarea {
+    resize: none;
+    font-size: 2em;
+}
+
+.containerParams {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "itemSelect"
+    "itemRadio";
+    grid-area: containerParams;
+}
+
+.itemSelect {
+    grid-area: itemSelect;
+    margin: auto;
+}
+
+.itemRadio {
+    grid-area: itemRadio;
+    margin: auto;
+}
+
+.itemButton {
+    grid-area: itemButton;
+    margin: auto;
+}
+
+.containerPre {
+    grid-area: containerPre;
+    border: solid;
+    overflow: auto;
+    min-height: 624px;
+    max-height: 624px;
+    padding-left: 1%;
+    word-break: normal !important;
+    word-wrap: normal !important;
+}

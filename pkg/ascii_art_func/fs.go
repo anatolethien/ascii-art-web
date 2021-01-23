@@ -10,7 +10,7 @@ func Fs(text string, banner string) string {
 	var file = scanner(banner)
 
 	var splitText []string
-	splitText = strings.Split(text, "\\n")
+	splitText = strings.Split(text, "\n")
 
 	for _, word := range splitText {
 		output = generator(output, file, word, index)
