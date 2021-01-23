@@ -4,7 +4,10 @@ import (
 	"../ascii_art_err"
 	"../ascii_art_func"
 	"html/template"
+	"io"
 	"net/http"
+	"strconv"
+	"strings"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -19,17 +22,29 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 		var text = r.FormValue("text")
 		var banner = r.FormValue("banner")
+		var mode = r.FormValue("mode")
 
 		if ascii_art_func.ValidText(text) == true {
 
-			var display = Display{
-				Input:  text,
-				Output: ascii_art_func.Fs(text, banner),
+			display = Display{
+				Text:   text,
+				Result: ascii_art_func.Fs(text, banner),
 			}
 
-			w.WriteHeader(ascii_art_err.Created.Status)
-			var t, _ = template.ParseFiles("templates/index.html")
-			t.Execute(w, display)
+			if mode == "show" {
+
+				w.WriteHeader(ascii_art_err.Created.Status)
+				var t, _ = template.ParseFiles("templates/index.html")
+				t.Execute(w, display)
+
+			} else if mode == "download" {
+
+				var output = strings.NewReader(display.Result)
+				w.Header().Set("Content-Disposition", "attachment; filename=file.txt")
+				w.Header().Set("Content-Length", strconv.Itoa(len(display.Result)))
+				io.Copy(w, output)
+
+			}
 
 		} else if ascii_art_func.ValidText(text) == false {
 

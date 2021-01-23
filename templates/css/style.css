@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+body {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 72px;
+}
+
+h3 {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 36px;
+}
+
+.logo {
+    vertical-align: middle;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -6,6 +34,7 @@
     "containerBar"
     "containerPre";
     margin: 1%;
+    border: solid;
 }
 
 .containerBar {
@@ -17,17 +46,19 @@
     "itemTextarea containerParams itemButton";
     grid-area: containerBar;
     margin: fill;
+    background-color: white;
+    border: solid;
 }
 
 .itemTextarea {
     grid-area: itemTextarea;
-    border: solid;
     margin: auto;
 }
 
 textarea {
     resize: none;
-    font-size: 2em;
+    font-size: 1em;
+    font-family: Montserrat, sans-serif;
 }
 
 .containerParams {
@@ -38,6 +69,7 @@ textarea {
     "itemSelect"
     "itemRadio";
     grid-area: containerParams;
+    font-family: Montserrat, sans-serif;
 }
 
 .itemSelect {
@@ -57,11 +89,11 @@ textarea {
 
 .containerPre {
     grid-area: containerPre;
-    border: solid;
     overflow: auto;
-    min-height: 624px;
-    max-height: 624px;
+    height: 624px;
     padding-left: 1%;
     word-break: normal !important;
     word-wrap: normal !important;
+    background-color: white;
+    border: solid;
 }

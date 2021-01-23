@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>ascii-art-web</title>
     <meta charset="UTF-8">
-    <title>/ascii-art-web/error</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<h1>/ascii-art-web/error</h1>
-<h2>{{ .Status }} {{ .StatusText }}</h2>
+<h1>
+    <img class="logo" src="media/logo.png" height="50" width="50">
+    ascii-art-web
+</h1>
+<h2>
+    Oops! {{ .Status }} {{ .StatusText }}
+</h2>
+<h3>
+    <a href="/">Return to the main page</a>
+</h3>
 </body>
 </html>

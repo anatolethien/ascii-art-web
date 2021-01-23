@@ -3,8 +3,8 @@ package ascii_art_web
 var display Display
 
 type Display struct {
-	Input  string
-	Output string
+	Text   string
+	Result string
 }
 
 type Status struct {
