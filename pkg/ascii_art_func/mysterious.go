@@ -8,8 +8,14 @@ import (
 
 func Mysterious(text string) {
 
-	if text == "Lizardon" {
-		var file, _ = os.Open("assets/charizard.txt")
+	if text == "lizardon" {
+		var file, _ = os.Open("assets/mysterious/charizard.txt")
+		var scanner = bufio.NewScanner(file)
+		for scanner.Scan() == true {
+			fmt.Println(scanner.Text())
+		}
+	} else if text == "doom" {
+		var file, _ = os.Open("assets/mysterious/doom.txt")
 		var scanner = bufio.NewScanner(file)
 		for scanner.Scan() == true {
 			fmt.Println(scanner.Text())
