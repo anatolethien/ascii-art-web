@@ -9,6 +9,6 @@ func WebServer() {
 	http.HandleFunc("/", handler)
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("templates/css"))))
 	http.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("templates/media"))))
-	http.ListenAndServe(":1337", nil)
+	http.ListenAndServe(":80", nil)
 
 }
