@@ -1,0 +1,74 @@
+:root {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+}
+
+* {
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--nord6);
+}
+
+header {
+    align-items: center;
+    background-color: var(--nord0);
+    color: var(--nord6);
+    display: flex;
+    font-family: sans-serif;
+    font-size: 2em;
+    height: 8vh;
+    justify-content: center;
+}
+
+form {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    height: 12vh;
+    padding: 0vh 2vh;
+}
+
+pre {
+    height: 72vh;
+}
+
+footer {
+    align-items: center;
+    background-color: var(--nord0);
+    color: var(--nord6);
+    display: flex;
+    font-family: sans-serif;
+    font-size: 1em;
+    height: 8vh;
+    justify-content: center;
+}
+
+footer a {
+    align-items: center;
+    color: var(--nord6);
+    display: flex;
+    height: 8vh;
+    text-decoration: none;
+}
+
+footer img {
+    height: 4vh;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>ascii-art-web</title>
+</head>
+
+<body>
+    <header>
+        ascii-art-web
+    </header>
+    <div class="wrapper">
+        <form action="/ascii-art" method="post">
+            <input name="input" type="text" placeholder="Type your text here...">
+            <select name="banner">
+                <option value="standard">standard</option>
+                <option value="shadow">shadow</option>
+                <option value="thinkertoy">thinkertoy</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <pre>{{.Output}}</pre>
+    </div>
+    <footer>
+        <a href="https://github.com/anatolethien/ascii-art-web"><img src="/static/images/github.svg"></a>
+    </footer>
+</body>
+
+</html>
