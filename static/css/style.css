@@ -17,58 +17,110 @@
     --nord15: #b48ead;
 }
 
-* {
-    font-size: 2vh;
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 2vh;
+    font-family: sans-serif;
 }
 
 body {
-    background-color: var(--nord6);
+    background: var(--nord6);
 }
 
 header {
     align-items: center;
-    background-color: var(--nord0);
+    background: var(--nord0);
     color: var(--nord6);
     display: flex;
-    font-family: sans-serif;
-    font-size: 2em;
-    height: 8vh;
+    height: 4rem;
     justify-content: center;
 }
 
-form {
-    align-items: center;
-    display: inline-flex;
-    justify-content: space-between;
-    height: 12vh;
-    padding: 0vh 2vh;
+header h1 {
+    font-size: 2rem;
 }
 
-pre {
-    height: 72vh;
+.wrapper {
+    background: var(--nord0);
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    height: 38rem;
+}
+
+.wrapper form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
+    height: 2rem;
+}
+
+.wrapper form input {
+    background: var(--nord6);
+    color: var(--nord0);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 0rem 0.5rem 0rem 0rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.wrapper form input::placeholder {
+    color: var(--nord3);
+}
+
+.wrapper form input:focus {
+    outline: none;
+}
+
+.wrapper form select {
+    background: var(--nord6);
+    color: var(--nord0);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    width: 15%
+}
+
+.wrapper form button {
+    background: var(--nord6);
+    color: var(--nord0);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0rem 0rem 0rem 0.5rem;
+    width: 10%
+}
+
+.wrapper pre {
+    background: var(--nord6);
+    overflow: auto;
+    height: 33rem;
 }
 
 footer {
     align-items: center;
-    background-color: var(--nord0);
+    background: var(--nord0);
     color: var(--nord6);
     display: flex;
-    font-family: sans-serif;
-    font-size: 1em;
-    height: 8vh;
-    justify-content: center;
+    height: 4rem;
+    justify-content: space-around;
 }
 
 footer a {
+    font-size: 1rem;
     align-items: center;
-    color: var(--nord6);
-    display: flex;
-    height: 8vh;
-    text-decoration: none;
 }
 
-footer img {
-    height: 4vh;
+footer a img {
+    height: 2rem;
 }
