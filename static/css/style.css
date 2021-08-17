@@ -216,3 +216,45 @@ footer .darkmode-btn img {
     height: 2rem;
     width: 2rem;
 }
+
+.light .wrapper-err {
+    background: var(--nord6);
+    height: 38rem;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dark .wrapper-err {
+    background: var(--nord0);
+    height: 38rem;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.light .status {
+    color: var(--nord0);
+    font-size: 12rem;
+}
+
+.dark .status {
+    color: var(--nord6);
+    font-size: 12rem;
+}
+
+.light .error {
+    color: var(--nord0);
+    font-size: 4rem;
+}
+
+.dark .error {
+    color: var(--nord6);
+    font-size: 4rem;
+}
