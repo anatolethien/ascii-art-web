@@ -8,6 +8,8 @@ import (
 	"net/http"
 )
 
+const Port = ":3000"
+
 type display struct {
 	Output string
 }
@@ -25,6 +27,6 @@ func main() {
 		t.Execute(w, ascii)
 	})
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
-	fmt.Printf("Launching web app at http://127.0.0.1:3000...\n")
-	http.ListenAndServe(":3000", nil)
+	fmt.Printf("Launching web app at http://127.0.0.1%s...\n", Port)
+	http.ListenAndServe(Port, nil)
 }
