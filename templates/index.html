@@ -7,13 +7,13 @@
     <title>ascii-art-web</title>
 </head>
 
-<body>
+<body class="light">
     <header>
         <h1>ascii-art-web</h1>
     </header>
     <div class="wrapper">
         <form action="/ascii-art" method="post">
-            <input class="input" name="input" type="text" placeholder="Type your text here...">
+            <input name="input" type="text" placeholder="Type your text here...">
             <select name="banner">
                 <option value="standard">standard</option>
                 <option value="shadow">shadow</option>
@@ -22,10 +22,16 @@
             <button type="submit">Submit</button>
         </form>
         <pre>{{.Output}}</pre>
+        <div class="options">
+            <div class="copy-btn"><img src="/static/images/clipboard.svg" title="Copy to clipboard"></div>
+            <div class="download-btn"><img src="/static/images/download.svg" title="Download as file"></div>
+        </div>
     </div>
     <footer>
-        <a href="https://github.com/anatolethien/ascii-art-web"><img src="/static/images/github.svg"></a>
+        <a href="https://github.com/anatolethien/ascii-art-web"><img src="/static/images/github.svg" title="GitHub repository"></a>
+        <div class="darkmode-btn"><img src="/static/images/dark.svg" title="Toggle dark mode"></div>
     </footer>
+    <script src="/static/js/app.js"></script>
 </body>
 
 </html>
