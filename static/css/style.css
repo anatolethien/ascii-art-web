@@ -45,7 +45,12 @@ header {
     justify-content: center;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header h1 {
+    color: var(--nord6);
     font-size: 2rem;
 }
 
