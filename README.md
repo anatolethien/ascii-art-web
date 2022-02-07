@@ -24,4 +24,4 @@ First, build the docker image using the provided `Dockerfile`.
 
 Then, run the docker image on port `3000`.
 
-    docker run -dp 3000:3000 ascii-art-web
+    docker run -dp 3000:80 ascii-art-web
